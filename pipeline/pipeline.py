@@ -22,15 +22,15 @@ class AnimeRecommendationPipeline:
             logger.error(f"Failed to Initialize pipeline {str(e)}")
             raise CustomException("Error during pipeline initialization", e)
         
-        def recommend(self, query:str) -> str:
-            try:
-                logger.info(f"Received a query: {query}")
+    def recommend(self, query:str) -> str:
+        try:
+            logger.info(f"Received a query: {query}")
 
-                recommendation = self.recommender.get_recommendation(query)
-                logger.info("Recommendation generated successfully")
+            recommendation = self.recommender.get_recommendation(query)
+            logger.info("Recommendation generated successfully")
 
-                return recommendation
-            
-            except Exception as e:
-                logger.error(f"Failed to get recommendation {str(e)}")
-                raise CustomException("Error during getting recommendation", e)
+            return recommendation
+        
+        except Exception as e:
+            logger.error(f"Failed to get recommendation {str(e)}")
+            raise CustomException("Error during getting recommendation", e)

@@ -3,6 +3,7 @@ langchain-text-splitters
 langchain-community
 langchain_groq
 langchain_huggingface
+langchain-chroma
 chromadb
 streamlit
 pandas
