@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    image: anime-recommender:latest
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env        # Your .env kept locally, not baked in image
+    volumes:
+      - ./chroma_db:/app/chroma_db   # persist vector DB outside container
+      - ./data:/app/data             # optional data mount
+    restart: unless-stopped

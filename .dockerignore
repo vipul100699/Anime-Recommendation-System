@@ -1,0 +1,44 @@
+# Virtual envs and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Secrets & env
+.env
+.env.* 
+
+# Data, artifacts, logs (do not bake into image)
+chroma_db/
+data/
+logs/
+artifacts/
+models/
+
+# Git / VCS / IDE
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# OS and editor junk
+.DS_Store
+Thumbs.db
+*.swp
+
+# Docker files (optional)
+Dockerfile
+docker-compose.yml
+
+# Optional: tests (remove if tests needed in container)
+tests/
